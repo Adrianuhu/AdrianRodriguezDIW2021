@@ -44,13 +44,14 @@
             color: darkorchid;
             font-family: Verdana, Geneva, sans-serif;
             font-size: 0.85em;
+            list-style-type: square;
         }
         
         .negrita {
             font-weight: bold;
         }
         
-        li[id] .negrita {
+        li[id] span.negrita {
             background-color: #ff9;
         }
         
@@ -61,7 +62,7 @@
             border: thin dotted #ac8159;
         }
         
-        p.sin_recuadro~p.sin_recuadro {
+        p.sin_recuadro+p.sin_recuadro {
             text-decoration: underline;
         }
         
