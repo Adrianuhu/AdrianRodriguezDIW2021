@@ -1,0 +1,38 @@
+/* Añadir los estilos necesarios para que la página web se muestre como en la imagen */
+
+table {
+    width: 100%;
+}
+
+p:first-of-type {
+    font-style: italic;
+    font-weight: bold;
+}
+
+#consejo {
+    color: purple;
+    background-color: khaki;
+}
+
+p span#textolinea {
+    color: purple;
+    background-color: wheat;
+    text-decoration: underline;
+    text-transform: uppercase;
+}
+
+h3 {
+    color: wheat;
+    background-color: rgb(170, 78, 42);
+}
+
+.clase {
+    color: purple;
+    font-weight: 100;
+}
+
+#idparaestilo {
+    background-color: rgba(108, 53, 163, 0.479);
+    color: white;
+    word-spacing: 1em;
+}
