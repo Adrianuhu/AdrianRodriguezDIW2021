@@ -7,6 +7,7 @@ table {
 p:first-of-type {
     font-style: italic;
     font-weight: bold;
+    text-indent: 2em;
 }
 
 #consejo {

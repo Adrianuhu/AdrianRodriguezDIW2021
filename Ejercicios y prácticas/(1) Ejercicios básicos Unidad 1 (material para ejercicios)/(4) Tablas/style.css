@@ -8,7 +8,7 @@ th {
 }
 
 .par td {
-    background-color: khaki;
+    background-color: rgba(240, 230, 140, 0.658);
 }
 
 tr.par:hover td {
