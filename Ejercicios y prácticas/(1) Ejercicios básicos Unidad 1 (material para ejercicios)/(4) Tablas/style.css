@@ -1,0 +1,42 @@
+table,
+td,
+th {
+    border: 1px solid black;
+    border-collapse: collapse;
+    height: 3.5em;
+    width: 400px;
+}
+
+.par td {
+    background-color: khaki;
+}
+
+tr.par:hover td {
+    background-color: yellow;
+}
+
+td,
+th {
+    vertical-align: bottom;
+    text-align: center;
+}
+
+.cabecera th {
+    background: url(imagenes/fondo_gris.gif)no-repeat rgb(243, 241, 215);
+}
+
+.euro {
+    background: url(imagenes/euro.png)no-repeat rgba(173, 230, 222, 0.527);
+}
+
+.dolar {
+    background: url(imagenes/dolar.png)no-repeat rgba(173, 230, 222, 0.527);
+}
+
+.libra {
+    background: url(imagenes/libra.png)no-repeat rgba(173, 230, 222, 0.527);
+}
+
+.yen {
+    background: url(imagenes/yen.png)no-repeat rgba(173, 230, 222, 0.527);
+}
