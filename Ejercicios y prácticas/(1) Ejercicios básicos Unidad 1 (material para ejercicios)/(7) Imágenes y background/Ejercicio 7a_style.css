@@ -1,0 +1,13 @@
+body {
+    background: url(madrid.jpg);
+}
+
+div {
+    background-color: lightblue;
+    width: 6.5rem;
+    height: 6.5rem;
+}
+
+img {
+    overflow: scroll;
+}

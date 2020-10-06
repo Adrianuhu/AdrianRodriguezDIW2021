@@ -1,0 +1,39 @@
+* {
+    /* Todos los elementos de la página tienen borde */
+    border: thin solid #442A5D;
+}
+
+#negrita {
+    display: block;
+}
+
+p:nth-child(2) {
+    display: inline;
+}
+
+p:nth-child(5) {
+    display: list-item;
+    list-style-type: disc;
+}
+
+p:nth-child(7) {
+    display: none;
+}
+
+.bloqueenlinea {
+    display: inline-block;
+    height: 100px;
+}
+
+p:nth-child(7) {
+    display: none;
+}
+
+p:nth-child(10),
+p:nth-child(11),
+p:nth-child(12) {
+    display: table-cell;
+}
+
+
+/* Del resto hay que crear clases por cada párrafo, en función de la propiedad display */
