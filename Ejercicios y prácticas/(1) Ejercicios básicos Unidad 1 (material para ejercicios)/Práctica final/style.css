@@ -1,0 +1,102 @@
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+
+:root {
+    --color-salmon: #F3826F;
+    --gris-claro: #eee;
+}
+
+.menu li a,
+#contenedor-imagen p:first-child,
+h1.titulo,
+button,
+.imagen-Info p {
+    text-transform: uppercase;
+}
+
+.contenido-contenedor-imagen h1,
+.contenido-contenedor-imagen p {
+    color: var(--gris-claro);
+}
+
+#menu {
+    background-color: grey;
+}
+
+.menu {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.menu {
+    display: flex;
+    flex-direction: row;
+}
+
+#contenedor-imagen {
+    background: url(images/restaurant.jpg);
+    background-size: cover;
+    background-position: center;
+    height: 25vh;
+}
+
+#contenedor-imagen {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.contenido-contenedor-imagen {
+    text-align: center;
+}
+
+.discover {
+    background-color: var(--color-salmon);
+    color: var(--gris-claro);
+}
+
+.presentacion {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.imagen-Info {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.imagen-Izq {
+    background: url(images/food1.jpg);
+    width: 20%;
+    height: 100px;
+    background-size: cover;
+}
+
+.imagen-Info {
+    background: var(--color-salmon);
+    width: 20%;
+    height: 150px;
+    background-size: cover;
+    text-align: center;
+}
+
+.order {
+    background-color: var(--gris-claro);
+    color: var(--color-salmon);
+}
+
+.imagen-Der {
+    background: url(images/food1.jpg);
+    width: 20%;
+    height: 100px;
+    background-size: cover;
+}
