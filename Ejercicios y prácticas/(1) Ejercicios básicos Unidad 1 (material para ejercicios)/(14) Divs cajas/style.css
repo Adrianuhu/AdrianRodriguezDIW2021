@@ -1,0 +1,35 @@
+div {
+    height: 100px;
+    width: 100px;
+    margin: 5px;
+    float: left;
+    border: 1px solid black;
+}
+
+.caja1,
+.caja2,
+.caja3 {
+    background-color: white;
+}
+
+.caja4,
+.caja5,
+.caja6 {
+    background-color: green;
+}
+
+.caja7,
+.caja8,
+.caja9 {
+    background-color: blue;
+}
+
+.caja4,
+.caja7 {
+    clear: left;
+}
+
+div:nth-child(3n+2),
+div:last-of-type {
+    visibility: hidden;
+}
