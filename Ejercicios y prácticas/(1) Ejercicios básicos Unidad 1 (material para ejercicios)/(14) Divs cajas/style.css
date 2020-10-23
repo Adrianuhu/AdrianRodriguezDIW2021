@@ -2,8 +2,8 @@ div {
     height: 100px;
     width: 100px;
     margin: 5px;
-    float: left;
     border: 1px solid black;
+    float: left;
 }
 
 .caja1,
