@@ -1,0 +1,44 @@
+.contenedor {
+    background-color: darkblue;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    flex-wrap: wrap-reverse;
+    justify-content: space-around;
+    height: auto;
+    padding: 50px 0px;
+    width: 400px;
+}
+
+.caja {
+    background-color: cornflowerblue;
+    color: white;
+    border: 1px solid white;
+    width: 80px;
+    text-align: center;
+    line-height: 80px;
+}
+
+.contenedor2 {
+    background-color: darkblue;
+    display: flex;
+    align-items: flex-end;
+    flex-wrap: wrap-reverse;
+    justify-content: space-between;
+    height: auto;
+    margin-top: 20px;
+    width: 400px;
+}
+
+.caja2 {
+    background-color: cornflowerblue;
+    color: white;
+    border: 1px solid white;
+    width: 80px;
+    text-align: center;
+    line-height: 80px;
+}
+
+.caja2:last-child {
+    margin-bottom: 50px;
+}
