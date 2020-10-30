@@ -1,0 +1,33 @@
+.cabecera {
+    display: flex;
+    background-color: midnightblue;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px;
+}
+
+.titulo {
+    color: white;
+    font-size: 2em;
+}
+
+.menu {
+    padding: 0;
+    display: flex;
+    list-style-type: none;
+    background-color: rgb(240, 82, 61);
+    border-radius: 10px;
+}
+
+.menu li {
+    padding: 10px 10px;
+    color: white;
+}
+
+.cuerpo {
+    display: flex;
+}
+
+.texto {
+    display: flex;
+}
