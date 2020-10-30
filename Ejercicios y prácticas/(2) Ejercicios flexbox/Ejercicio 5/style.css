@@ -1,0 +1,50 @@
+.contenedor .caja {
+    background-color: peru;
+    color: black;
+    text-align: center;
+    line-height: 40px;
+    border: 1px solid black;
+    flex-grow: 1;
+}
+
+.contenedor {
+    background-color: lightgray;
+    display: flex;
+    justify-content: space-between;
+    padding: 15px;
+}
+
+.contenedor .caja:nth-child(1) {
+    order: 4;
+    flex-grow: 1;
+}
+
+.contenedor .caja:nth-child(3) {
+    flex-grow: 2;
+}
+
+.contenedor .caja:nth-child(4) {
+    flex-grow: 3;
+}
+
+.contenedor2 .caja {
+    background-color: peru;
+    color: black;
+    text-align: left;
+    height: 100px;
+    border: 1px solid black;
+    flex-grow: 1;
+    margin-top: 15px;
+}
+
+.contenedor2 {
+    margin-top: 15px;
+    background-color: teal;
+    display: flex;
+    justify-content: space-between;
+    padding: 15px;
+}
+
+.contenedor2 .caja:nth-child(2) {
+    flex-grow: 3;
+}
