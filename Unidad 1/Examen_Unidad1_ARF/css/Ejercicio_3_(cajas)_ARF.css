@@ -1,0 +1,50 @@
+.contenedorMain {
+    box-sizing: border-box;
+    border: 1px solid black;
+    height: 65vh;
+    font-size: 22px;
+    padding: 0.5rem;
+}
+
+.cajaAzulIzq {
+    box-sizing: border-box;
+    position: relative;
+    float: left;
+    width: 50%;
+    height: 50%;
+    box-sizing: border-box;
+    border: 1px dotted blue;
+}
+
+.cajaAzulDer {
+    box-sizing: border-box;
+    position: relative;
+    float: left;
+    width: 50%;
+    height: 50%;
+    box-sizing: border-box;
+    border: 1px dotted blue;
+}
+
+p {
+    position: absolute;
+    margin-top: 0px;
+}
+
+.cajaRoja {
+    box-sizing: border-box;
+    position: relative;
+    clear: both;
+    box-sizing: border-box;
+    border: 1px dotted red;
+    height: 50%;
+    margin-bottom: 0.5rem;
+}
+
+ol {
+    list-style-type: upper-roman;
+    position: absolute;
+    margin-top: 0px;
+    list-style-position: inside;
+    padding-left: 0px;
+}

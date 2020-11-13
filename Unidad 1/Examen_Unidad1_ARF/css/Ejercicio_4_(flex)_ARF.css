@@ -1,0 +1,41 @@
+.contenedorMain {
+    display: flex;
+    border: 1px solid black;
+    height: 80vmax;
+    box-shadow: 5px 5px 12px blue;
+    padding: 0.5em;
+}
+
+.contenedorIzq {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border: 1px solid black;
+    flex-grow: 7;
+    margin-right: 0.5em;
+}
+
+.texto3 {
+    align-self: flex-end;
+}
+
+.contenedorDer {
+    border: 1px solid black;
+    flex-grow: 3;
+}
+
+
+/*
+
+
+    <div class="contenedorMain">
+        <div class="contenedorIzq">
+            <p class="texto1">Texto alineado con flex</p>
+            <p class="texto2">Texto alineado con flex</p>
+            <p class="texto3">Texto alineado con flex</p>
+        </div>
+        <div class="contenedorDer"></div>
+    </div>
+</body>
+
+*/

@@ -1,0 +1,42 @@
+body {
+    position: relative;
+    width: 80%;
+    margin: auto;
+}
+
+.cabecera {
+    position: sticky;
+    top: 0px;
+    width: auto;
+    background-image: url("../img/logo.png");
+    background-position: right;
+    background-repeat: no-repeat;
+    background-size: contain;
+    border: 1px solid black;
+    border-radius: 15px;
+    height: 5em;
+    background-color: cornflowerblue;
+    margin-bottom: 15px;
+}
+
+.titulo {
+    position: absolute;
+    top: 50%;
+    transform: translate(0%, -100%);
+}
+
+.cuerpo p {
+    text-align: justify;
+    font-style: italic;
+    text-indent: 25px;
+    line-height: 2em;
+}
+
+.cuerpo p::first-letter {
+    font-size: 30px;
+}
+
+.cuerpo {
+    border: 1px solid black;
+    height: 500px;
+}
