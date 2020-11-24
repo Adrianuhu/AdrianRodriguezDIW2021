@@ -1,0 +1,21 @@
+.grid {
+    display: grid;
+    grid-gap: 1px;
+    grid-template-columns: repeat(2, 1fr 2fr);
+    grid-template-rows: repeat(5, 1.5rem);
+    grid-column-gap: 0.5em;
+    grid-row-gap: 0.5em;
+    /* Si hay m�s de 4 filas, su alto se ajustar�a al contenido o a grid-auto-rows si existiera */
+}
+
+div.grid div {
+    border: 1px solid black;
+}
+
+div.grid div:nth-child(2n+1) {
+    background-color: grey;
+}
+
+div.grid div:nth-child(2n) {
+    background-color: yellow;
+}
