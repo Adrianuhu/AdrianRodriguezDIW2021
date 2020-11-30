@@ -304,6 +304,7 @@ a {
     .mapaNav {
         align-items: center;
         flex-direction: column;
+        padding-top: 5em;
     }
     .botonFooter {
         margin-bottom: 40px;
@@ -377,9 +378,15 @@ a {
     .botonFooter {
         display: none;
     }
+    .mapaNav {
+        padding-top: 2em;
+    }
     .enlaces {
         display: flex;
-        justify-content: space-around;
-        width: 50vh;
+        flex-direction: column;
+        width: 100%;
+    }
+    .columna {
+        margin-bottom: 1em;
     }
 }
