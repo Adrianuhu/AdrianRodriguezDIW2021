@@ -18,7 +18,8 @@
     display: flex;
     align-content: center;
     padding: 0em;
-    margin: 0.25em;
+    margin: 0em;
+    margin-left: 0.5em;
 }
 
 
@@ -131,6 +132,7 @@
 @media only screen and (max-width: 768px) {
     #cabecera {
         justify-content: center;
+        align-items: center;
     }
     .menu {
         flex-direction: column;
