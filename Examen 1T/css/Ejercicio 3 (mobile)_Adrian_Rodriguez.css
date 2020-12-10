@@ -1,0 +1,147 @@
+/* IMPORTANTE para evitar descuadres */
+
+* {
+    box-sizing: border-box;
+}
+
+
+/* Definimos un contenedor auxiliar para especificar el tamaño de la página y alineación */
+
+.centrado {
+    width: 80%;
+    margin: 0 auto;
+}
+
+.menu {
+    margin-left: 1em;
+    position: relative;
+    display: flex;
+    align-content: center;
+    padding: 0em;
+    margin: 0.25em;
+}
+
+
+/* En este caso se opta por la altura en em para que se adapte al tamaño de fuente de los elementos de la clase menú*/
+
+.topdown {
+    height: 6em;
+    border-radius: 1em;
+    border: 1px solid black;
+    display: flex;
+    align-items: flex-start;
+}
+
+#cabecera {
+    display: flex;
+    align-items: flex-end;
+}
+
+
+/* Estilos de cada ítem de menú */
+
+.menu div.menu-item {
+    text-align: center;
+    padding: 0.25em;
+    background-color: blue;
+    color: lightgrey;
+    margin: 0em;
+    padding: 0.25em;
+    width: 7rem;
+}
+
+
+/* Display flex para alinear el menú en la cabecera */
+
+#cabecera {
+    background-color: lightblue;
+    margin: auto;
+}
+
+
+/* Importante definir la altura en el contenedor principal con alguna unidad que no sea porcentaje. Así se calculan bien las de los elementos internos */
+
+.main_container {
+    border: 1px solid black;
+    padding: 0.5rem;
+    height: 65vh;
+    box-shadow: 2px 2px 5px blue;
+    margin-top: 0.5rem;
+    display: flex;
+}
+
+
+/* Clase con borde rojo para las cajas */
+
+.caja {
+    border: 1px dotted red;
+    padding: 0.5em;
+}
+
+#izquierda {
+    width: 80%;
+    height: 100%;
+    margin-right: 0.5rem;
+    padding: 0.5rem;
+    border: 1px solid black;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+#derecha {
+    border: 1px solid black;
+    width: 20%;
+    height: 100%;
+}
+
+
+/* Altura de las cajas con contenido */
+
+#caja_pequeña {
+    height: 30%;
+    margin-bottom: 0.5rem;
+    width: 100%;
+}
+
+#caja_grande {
+    width: 100%;
+    display: flex;
+    height: 70%;
+    justify-content: stretch;
+}
+
+#caja_grande div {
+    flex-basis: 500%;
+}
+
+
+/* Estilos del pie de página */
+
+#pie {
+    margin-top: 0.5rem;
+}
+
+@media only screen and (max-width: 992px) {
+    #caja_grande {
+        display: flex;
+        flex-wrap: wrap;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    #cabecera {
+        justify-content: center;
+    }
+    .menu {
+        flex-direction: column;
+    }
+}
+
+@media only screen and (max-width: 544px) {
+    #derecha {
+        display: none;
+    }
+    #izquierda {
+        width: 100%;
+    }
+}
