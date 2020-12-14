@@ -7,9 +7,35 @@
     <title>Document</title>
 </head>
 
+<style>
+    .cajaCentro {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        cursor: pointer;
+    }
+    
+    .botonRojo {
+        position: absolute;
+        background-color: red;
+        color: white;
+        height: 50px;
+        left: 50%;
+        top: 80%;
+        transform: translate(-50%, -50%);
+        cursor: pointer;
+    }
+</style>
+
 <body>
-    Pues una página <br> Haz click aquí <br>
-    <Button>Boton de hacer clicks</Button>
+    <div class="cajaCentro">
+        Pues una página <br><br> Haz click aquí <br><br>
+        <Button>Boton de hacer clicks</Button>
+    </div>
+
+    <button class="botonRojo">Este botón hace algo</button>
+
 </body>
 
 </html>
