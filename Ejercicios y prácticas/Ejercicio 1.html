@@ -12,19 +12,6 @@
             crear();
         }
 
-
-        function crearCaja(color, texto) {
-            var ele = document.createElement("div");
-            document.body.appendChild(ele);
-            ele.style.backgroundColor = color;
-            ele.innerHTML = texto;
-            ele.style.marginBottom = "10px";
-            ele.style.display = "none";
-            ele.addEventListener("click", parar);
-            return ele;
-
-        }
-
         function crear() {
             var cajas = [];
             var count = 1000;
@@ -41,6 +28,19 @@
                 count += 1000;
             }
         }
+
+        function crearCaja(color, texto) {
+            var ele = document.createElement("div");
+            document.body.appendChild(ele);
+            ele.style.backgroundColor = color;
+            ele.innerHTML = texto;
+            ele.style.marginBottom = "10px";
+            ele.style.display = "none";
+            ele.addEventListener("click", parar);
+            return ele;
+
+        }
+
 
         function parar() {
             for (let time of timers) {
