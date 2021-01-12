@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script>
+        function inicio() {
+
+            var botonInicio = document.querySelector("#botonInicio");
+            botonInicio.addEventListener("click", iniciar);
+
+        }
+
+        function iniciar() {
+            var segundos = document.querySelector("#segundos").value;
+
+            if (segundos > 0) {
+                var contador = document.querySelector("#contador");
+                contador.style.color = "black";
+                contador.innerHTML = segundos;
+
+                var botonParar = document.querySelector("#botonParar");
+                botonParar.addEventListener("click", parar);
+
+                var cuenta = setInterval(() => {
+                    contador.innerHTML = segundos - 1;
+                    segundos--;
+
+                    if (segundos > 0) {
+
+                    } else {
+                        if (segundos == 0) {
+                            contador.style.color = "red";
+                            parar();
+                        } else {
+                            parar();
+                        }
+                    }
+                }, 1000);
+
+                function parar() {
+                    clearInterval(cuenta);
+                }
+
+            } else {
+                document.querySelector("#segundos").value = "";
+                document.querySelector("#contador").innerHTML = "(Contador)";
+            }
+
+
+
+
+        }
+
+
+        window.onload = inicio;
+    </script>
+</head>
+
+<body>
+    <span>Número de segundos</span>
+    <input type="text" id="segundos">
+    <p id="contador">(Contador)</p>
+    <button id="botonInicio">Iniciar</button>
+    <button id="botonParar">Parar</button>
+</body>
+
+</html>
