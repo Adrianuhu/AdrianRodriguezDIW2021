@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #caja {
+            width: 200px;
+            height: 200px;
+            background-color: grey;
+        }
+    </style>
+    <script>
+        function inicio() {
+            var caja = document.getElementById("caja");
+            var btnIn = document.getElementById("fadeIn");
+            var btnOut = document.getElementById("fadeOut");
+            var btnMostrar = document.getElementById("mostrar");
+            var btnOcultar = document.getElementById("ocultar");
+
+
+            btnIn.addEventListener("click", function() {
+                fadeIn(caja, 1000, false);
+            });
+
+            btnOut.addEventListener("click", function() {
+                fadeOut(caja, 5000, false);
+            });
+
+            btnMostrar.addEventListener("click", function() {
+                caja.style.opacity = "1";
+            });
+
+            btnOcultar.addEventListener("click", function() {
+                caja.style.opacity = "0";
+            });
+
+        }
+
+        function fadeIn(caja, tiempo, callback) {
+            var opacidad = 0;
+            var intervalo = setInterval(function() {
+                opacidad += 1 * (10 / tiempo);
+                caja.style.opacity = Math.max(opacidad, 0);
+                if (opacidad >= 1) clearInterval(intervalo);
+            }, 10);
+        }
+
+        function fadeOut(caja, tiempo, callback) {
+            var opacidad = 1;
+            var intervalo = setInterval(function() {
+                opacidad -= 1 * (10 / tiempo);
+                caja.style.opacity = Math.max(opacidad, 0);
+                if (opacidad <= 0) clearInterval(intervalo);
+            }, 10);
+        }
+
+
+
+        window.onload = inicio;
+    </script>
+</head>
+
+<body>
+    <div id="caja"></div>
+    <button id="fadeIn">Fade In</button>
+    <button id="fadeOut">Fade Out</button>
+    <br>
+    <button id="mostrar">Mostrar</button>
+    <button id="ocultar">Ocultar</button>
+</body>
+
+</html>

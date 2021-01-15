@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #caja {
+            width: 200px;
+            height: 200px;
+            background-color: grey;
+        }
+    </style>
+    <script>
+        function inicio() {
+            var caja = document.getElementById("caja");
+            var btnIn = document.getElementById("slideUp");
+            var btnOut = document.getElementById("slideDown");
+            var btnMostrar = document.getElementById("mostrar");
+            var btnOcultar = document.getElementById("ocultar");
+
+
+            btnIn.addEventListener("click", function() {
+                slideUp(caja, 1000, false);
+            });
+
+            btnOut.addEventListener("click", function() {
+                slideDown(caja, 1000, false);
+            });
+
+            btnMostrar.addEventListener("click", function() {
+                caja.style.height = "200px";
+            });
+
+            btnOcultar.addEventListener("click", function() {
+                caja.style.height = "0px";
+            });
+
+        }
+
+        function slideUp(caja, tiempo, callback) {
+            var altura = 0;
+            var intervalo = setInterval(function() {
+                altura += 200 * (10 / tiempo);
+                caja.style.height = Math.min(altura, 200) + "px";
+                if (altura >= 200) clearInterval(intervalo);
+            }, 10);
+        }
+
+        function slideDown(caja, tiempo, callback) {
+            var altura = 200;
+            var intervalo = setInterval(function() {
+                altura -= 200 * (10 / tiempo);
+                caja.style.height = Math.max(altura, 0) + "px";
+                if (altura <= 0) clearInterval(intervalo);
+            }, 10);
+        }
+
+
+
+        window.onload = inicio;
+    </script>
+</head>
+
+<body>
+    <div id="caja"></div>
+    <button id="slideUp">Slide Up</button>
+    <button id="slideDown">Slide Down</button>
+    <br>
+    <button id="mostrar">Mostrar</button>
+    <button id="ocultar">Ocultar</button>
+</body>
+
+</html>
