@@ -48,6 +48,7 @@ function checkDentro() {
     var cuadradoTop = offsetCuadrado.top;
     var objCuadrado = document.getElementsByClassName("cuadrado")[0];
     var anchoCuadrado = window.getComputedStyle(objCuadrado).width.split("px")[0];
+    var altoCuadrado = window.getComputedStyle(objCuadrado).height.split("px")[0];
 
     var bloque = $(".block").last();
     var offsetBloque = bloque.offset();
@@ -55,11 +56,17 @@ function checkDentro() {
     var bloqueTop = offsetBloque.top;
     var objBlock = document.getElementsByClassName("block")[0];
     var anchoBloque = window.getComputedStyle(objBlock).width.split("px")[0];
+    var altoBloque = window.getComputedStyle(objBlock).height.split("px")[0];
 
     var block = document.getElementsByClassName("block")[0];
 
-    console.log(bloqueTop + " " + cuadradoTop);
-    if ((bloqueLeft > cuadradoLeft) && (bloqueTop > cuadradoTop)) {
+    var sumaBloqueAncho = parseInt(bloqueLeft) + parseInt(anchoBloque);
+    var sumaCuadradoAncho = parseInt(cuadradoLeft) + parseInt(anchoCuadrado);
+
+    var sumaBloqueAlto = parseInt(bloqueTop) + parseInt(altoBloque);
+    var sumaCuadradoAlto = parseInt(cuadradoTop) + parseInt(altoCuadrado);
+
+    if ((bloqueLeft > cuadradoLeft) && (bloqueTop > cuadradoTop) && (sumaBloqueAncho < sumaCuadradoAncho) && (sumaCuadradoAlto > sumaBloqueAlto)) {
         block.style.backgroundColor = "yellow";
     } else {
         block.style.backgroundColor = "greenyellow";
