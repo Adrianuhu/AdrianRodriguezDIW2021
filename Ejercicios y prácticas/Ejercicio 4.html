@@ -22,11 +22,11 @@
 
 
             btnIn.addEventListener("click", function() {
-                slideUp(caja, 1000, false);
+                slideUp(caja, 1000, alerta);
             });
 
             btnOut.addEventListener("click", function() {
-                slideDown(caja, 1000, false);
+                slideDown(caja, 1000, alerta);
             });
 
             btnMostrar.addEventListener("click", function() {
@@ -44,7 +44,10 @@
             var intervalo = setInterval(function() {
                 altura += 200 * (10 / tiempo);
                 caja.style.height = Math.min(altura, 200) + "px";
-                if (altura >= 200) clearInterval(intervalo);
+                if (altura >= 200) {
+                    clearInterval(intervalo)
+                    callback();
+                };
             }, 10);
         }
 
@@ -53,8 +56,15 @@
             var intervalo = setInterval(function() {
                 altura -= 200 * (10 / tiempo);
                 caja.style.height = Math.max(altura, 0) + "px";
-                if (altura <= 0) clearInterval(intervalo);
+                if (altura <= 0) {
+                    clearInterval(intervalo)
+                    callback();
+                };
             }, 10);
+        }
+
+        function alerta() {
+            alert("hola");
         }
 
 
