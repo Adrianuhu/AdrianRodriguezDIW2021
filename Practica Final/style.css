@@ -1,0 +1,134 @@
+* {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.diana {
+    position: absolute;
+    width: 80px;
+    height: 80px;
+    background-color: #666;
+    border-radius: 30%;
+    cursor: pointer;
+    transition: top 3s, left 3s;
+    transition-timing-function: linear;
+}
+
+#fondo {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    height: 100%;
+    width: 100%;
+    background-color: beige;
+    z-index: -1;
+}
+
+#aciertos {
+    color: green;
+}
+
+#fallos {
+    color: red;
+}
+
+body {
+    width: 0px;
+}
+
+.menu {
+    position: absolute;
+    display: flex;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.start,
+.instrucciones {
+    background-color: #478A95;
+    color: white;
+    padding: 10px 10px;
+    width: 200px;
+    align-self: center;
+    justify-self: center;
+    margin: 10px;
+    border-radius: 10px;
+    cursor: pointer;
+    text-align: center;
+}
+
+.display {
+    visibility: hidden;
+    position: absolute;
+    color: white;
+    display: flex;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    align-items: center;
+}
+
+.pts,
+.numPuntos,
+.numPorcentaje,
+.porcentaje,
+.ronda {
+    background-color: black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 30px;
+    width: 50px;
+    text-justify: inter-cluster;
+}
+
+.numPuntos,
+.numPorcentaje {
+    height: 30px;
+    width: 90px;
+}
+
+.numPuntos {
+    background-color: #945C3D;
+}
+
+.numPorcentaje {
+    background-color: #335B99;
+}
+
+.pts,
+.porcentaje,
+.ronda {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+.ronda {
+    height: 50px;
+    width: 90px;
+}
+
+.textoInstrucciones {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    visibility: hidden;
+}
+
+li {
+    list-style-type: none;
+}
+
+.puntuacionFinal {
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    visibility: hidden;
+    background-color: red;
+    color: white;
+    padding: 15px 120px;
+    border-radius: 10px;
+}
