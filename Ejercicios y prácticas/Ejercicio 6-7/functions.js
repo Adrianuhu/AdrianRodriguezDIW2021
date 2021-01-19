@@ -72,7 +72,23 @@ function checkDentro() {
         block.style.backgroundColor = "greenyellow";
     }
 
+}
 
+function allowDrop(ev) {
+    ev.preventDefault();
+}
+
+function drag(ev) {
+    ev.dataTransfer.setData("text", ev.target.id);
+}
+
+function drop(ev) {
+    ev.preventDefault();
+    var data = ev.dataTransfer.getData("text");
+    var caja = document.getElementById(data);
+    var nuevaCaja = ev.target.appendChild(caja);
+    nuevaCaja.style.top = ev.clientY + "px";
+    nuevaCaja.style.left = ev.clientX + "px";
 }
 
 window.onload = inicio;
