@@ -24,8 +24,6 @@
 
             });
 
-
-
         }
 
         function crear() {
@@ -42,7 +40,12 @@
                 var time = setTimeout(() => caja.style.display = "block", count);
                 timers.push(time);
                 count += 1000;
+
             }
+            var repetir = setTimeout(() => {
+                parar();
+            }, count);
+            timers.push(repetir);
 
         }
 
