@@ -31,7 +31,6 @@ function startJuego() {
 }
 
 function crearRonda(numRonda) {
-
     var ronda = setTimeout(() => {
 
         if (fallosConsecutivos >= 2) {
@@ -50,46 +49,38 @@ function crearRonda(numRonda) {
         }
 
     }, 4500);
-
 }
 
 
 function crearDiana() {
-    var numDianas = 1;
-    for (let i = 0; i < numDianas; i++) {
-        var diana = document.createElement("div");
-        document.body.appendChild(diana);
-        diana.className = "diana";
-        diana.style.position = "absolute";
-        let topRand = numeroAleatorio(20, 80);
-        let leftRand = numeroAleatorio(20, 80);
-        diana.style.top = topRand + "%";
-        diana.style.left = leftRand + "%";
+    var diana = document.createElement("div");
+    document.body.appendChild(diana);
+    diana.className = "diana";
+    diana.style.position = "absolute";
+    let topRand = numeroAleatorio(20, 80);
+    let leftRand = numeroAleatorio(20, 80);
+    diana.style.top = topRand + "%";
+    diana.style.left = leftRand + "%";
 
-        diana.addEventListener("click", clickDiana);
+    diana.addEventListener("click", clickDiana);
+    mover(diana);
 
-        mover(diana, 0, 0);
+    setTimeout(() => {
+        borrarcaja(diana);
+    }, 3000);
 
-        setTimeout(() => {
-            borrarcaja(diana);
-        }, 3000);
 
-    }
-
-    function mover(caja, leftRand, topRand) {
+    function mover(caja) {
         setTimeout(function() {
-
             let top = numeroAleatorio(10, 90);
             let left = numeroAleatorio(10, 90);
             caja.style.top = top + "%";
             caja.style.left = left + "%";
-
-        }, 0);
+        }, 10);
 
     }
 
     function borrarcaja(caja) {
-
         fallosConsecutivos++;
         fallos++;
 
@@ -98,7 +89,6 @@ function crearDiana() {
         } catch (error) {
             fallosConsecutivos--;
             fallos--;
-
         }
         actualizarPuntuacion();
     }
@@ -109,8 +99,6 @@ function clickDiana() {
     aciertos++;
     actualizarPuntuacion();
     this.parentNode.removeChild(this);
-
-
 }
 
 function clickBody() {
@@ -132,7 +120,7 @@ function mostrarInstrucciones() {
 
     if (elementVis == "hidden") {
         instrucciones.style.visibility = "visible";
-        menu.style.top = "70%";
+        menu.style.top = "80%";
     } else {
         instrucciones.style.visibility = "hidden";
         menu.style.top = "50%";

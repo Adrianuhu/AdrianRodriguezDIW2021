@@ -9,21 +9,7 @@
         var timers = [];
 
         function inicio() {
-
-            let p1 = new Promise((resolve, reject) => {
-
-                crear()
-                setTimeout(() => {
-                    resolve("¡Éxito!");
-                }, 5000);
-
-
-            });
-
-            p1.then((successMessage) => {
-
-            });
-
+            crear();
         }
 
         function crear() {
@@ -43,7 +29,7 @@
 
             }
             var repetir = setTimeout(() => {
-                parar();
+                reiniciar();
             }, count);
             timers.push(repetir);
 
@@ -56,13 +42,13 @@
             ele.innerHTML = texto;
             ele.style.marginBottom = "10px";
             ele.style.display = "none";
-            ele.addEventListener("click", parar);
+            ele.addEventListener("click", reiniciar);
             return ele;
 
         }
 
 
-        function parar() {
+        function reiniciar() {
             for (let time of timers) {
                 clearTimeout(time);
             }
