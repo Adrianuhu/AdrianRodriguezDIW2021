@@ -1,27 +1,46 @@
 ﻿const templateMyParagraph = document.createElement('template');
 
 templateMyParagraph.innerHTML = `
-  <style>
-    p {
-      background-color: #666;
-      padding: 5px;
-    }
-	
-	/* Estilos que se aplican a los elementos en un slot */
-	::slotted(*){
-		color: white;
-	}
-	
-	/* Estilos que se aplican a los elementos en un slot que son span */
-	::slotted(span){
-		color: orange;
-	}
-  </style>
-  <p><slot name="my-text">Mi texto predeterminado</slot></p>
+<style>
+summary>span:first-child {
+    color: darkcyan;
+}
+
+dl {
+    margin-left: 20px;
+}
+
+dt:first-child {
+    color: white;
+    background-color: darkcyan;
+    display: inline-block;
+    padding: 5px;
+    border-radius: 5px;
+    font-weight: bold;
+}
+</style>
+
+  
+  <details>
+        <summary>
+          <span>&lt<slot name="my-nombre">
+            NECESITA NOMBRE
+          </slot>&gt</span>
+            
+          <span><slot name="my-descripcion">
+              NECESITA DESCRIPCIÓN
+          </slot></span>
+        </summary>
+        <dl>
+            <dt>Atributos</dt>
+            <dt><slot name="my-name">Ninguno</slot></dt>
+            <dd><slot name="my-atributo"></slot></dd>
+        </dl>
+    </details>
 `;
 
 // En este caso creamos el Custom Element con una clase anónima
-customElements.define('my-paragraph',
+customElements.define('my-details',
     class extends HTMLElement {
         constructor() {
             super();

@@ -9,44 +9,20 @@
 </head>
 
 <body>
-    <my-paragraph>
-        <span slot="my-text">¡Tengamos un texto diferente!</span>
-    </my-paragraph>
-    <my-paragraph>
-        <ul slot="my-text">
-            <li>¡Tengamos un texto diferente!</li>
-            <li>¡En una lista!</li>
-        </ul>
-    </my-paragraph>
+    <my-details>
+    </my-details>
+    <my-details>
+        <span slot="my-nombre">slot</span>
+        <span slot="my-descripcion">Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus veritatis consectetur</span>
+        <span slot="my-name">name</span>
+        <span slot="my-atributo">El atributo name del slot</span>
+    </my-details>
 
 
-    <style>
-        summary>span:first-child {
-            color: darkcyan;
-        }
-        
-        dl {
-            margin-left: 20px;
-        }
-        
-        dt:first-child {
-            color: white;
-            background-color: darkcyan;
-            display: inline-block;
-            padding: 5px;
-            border-radius: 5px;
-            font-weight: bold;
-        }
-    </style>
 
-    <details>
-        <summary><span slot="my-nombre">&ltNECESITA NOMBRE&gt</span><span slot="my-descripcion"> NECESITA DESCRIPCIÓN</span></summary>
-        <dl>
-            <dt>Atributos</dt>
-            <dt slot="my-name">nombre</dt>
-            <dd slot="my-atributo">att</dd>
-        </dl>
-    </details>
+
+
+
     <script src="Ejercicio 3.js"></script>
 </body>
 
