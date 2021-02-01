@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<style>
+    .progreso {
+        width: 300px;
+        background-color: lightgray;
+        padding: 0px 0px;
+        border: 1px solid black;
+        text-align: center;
+    }
+    
+    .barra {
+        width: 0%;
+        color: white;
+        background-color: grey;
+        padding: 5px 0px;
+    }
+</style>
+
+
+<script>
+    function play(track) {
+
+
+        setInterval(() => {
+            var barra = document.getElementsByClassName("barra")[0];
+            barra.style.width = (ele.currentTime / ele.duration) * 100 + "%";
+            var tiempo = document.getElementById("tiempo").innerHTML = Math.round(ele.currentTime);
+        }, 10);
+    }
+</script>
+
+<body>
+
+    <button id="iniciar">Iniciar</button>
+    <button id="parar">Parar</button>
+    <div class="progreso">
+        <div class="barra">&nbsp</div>
+    </div>
+
+    <input type="text" id="tiempo" placeholder="segundos">
+
+    <my-progress></my-progress>
+
+
+</body>
+
+</html>
