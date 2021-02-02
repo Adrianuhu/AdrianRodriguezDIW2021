@@ -33,6 +33,7 @@
                 barra.style.width = Math.max(width, 0);
                 if (width >= maxWidth) clearInterval(this.intervalo);
                 barra.style.width = width + "%";
+                barra.innerHTML = Math.trunc(width) + "%";
 
             }, 10);
         })
@@ -76,8 +77,9 @@
             .barra {
                 width: 0%;
                 color: white;
-                background-color: grey;
+                background-color: green;
                 padding: 5px 0px;
+                text-align: left;
             }
         </style>
         
