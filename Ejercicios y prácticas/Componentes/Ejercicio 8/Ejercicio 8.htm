@@ -25,50 +25,11 @@
 </style>
 
 
-<script>
-    var intervalo;
-
-    function inicio() {
-        var width = 0;
-        var maxWidth = 100;
-        var tiempo = 1000;
-
-        var inputTiempo = document.getElementById("tiempo").value;
-
-        if (inputTiempo != "") {
-            tiempo = inputTiempo * 1000;
-        }
-
-        var barra = document.getElementsByClassName("barra")[0];
-
-        intervalo = setInterval(() => {
-
-            width += maxWidth * (10 / tiempo);
-            barra.style.width = Math.max(width, 0);
-            if (width >= maxWidth) clearInterval(intervalo);
-            barra.style.width = width + "%";
-
-        }, 10);
-    }
-
-    function parar() {
-        clearInterval(intervalo);
-    }
-</script>
-
 <body>
 
-    <button id="iniciar" onclick="inicio()">Iniciar</button>
-    <button id="parar" onclick="parar()">Parar</button>
-    <div class="progreso">
-        <div class="barra">&nbsp</div>
-    </div>
+    <my-progress status="1"></my-progress>
 
-    <input type="text" id="tiempo" placeholder="segundos">
-
-    <my-progress></my-progress>
-
-
+    <script src="Ejercicio 8.js"></script>
 </body>
 
 </html>
