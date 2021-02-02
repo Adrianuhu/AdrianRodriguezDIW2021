@@ -26,21 +26,40 @@
 
 
 <script>
-    function play(track) {
+    var intervalo;
 
+    function inicio() {
+        var width = 0;
+        var maxWidth = 100;
+        var tiempo = 1000;
 
-        setInterval(() => {
-            var barra = document.getElementsByClassName("barra")[0];
-            barra.style.width = (ele.currentTime / ele.duration) * 100 + "%";
-            var tiempo = document.getElementById("tiempo").innerHTML = Math.round(ele.currentTime);
+        var inputTiempo = document.getElementById("tiempo").value;
+
+        if (inputTiempo != "") {
+            tiempo = inputTiempo * 1000;
+        }
+
+        var barra = document.getElementsByClassName("barra")[0];
+
+        intervalo = setInterval(() => {
+
+            width += maxWidth * (10 / tiempo);
+            barra.style.width = Math.max(width, 0);
+            if (width >= maxWidth) clearInterval(intervalo);
+            barra.style.width = width + "%";
+
         }, 10);
+    }
+
+    function parar() {
+        clearInterval(intervalo);
     }
 </script>
 
 <body>
 
-    <button id="iniciar">Iniciar</button>
-    <button id="parar">Parar</button>
+    <button id="iniciar" onclick="inicio()">Iniciar</button>
+    <button id="parar" onclick="parar()">Parar</button>
     <div class="progreso">
         <div class="barra">&nbsp</div>
     </div>
