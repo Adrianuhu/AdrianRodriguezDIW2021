@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<script>
+    function inicio() {
+
+        var audio = document.getElementById("audio");
+
+        var play = crearBoton("play");
+        play.addEventListener("click", function() {
+            audio.play();
+        });
+
+        var pause = crearBoton("pause");
+        pause.addEventListener("click", function() {
+            audio.pause();
+        });
+
+        var volumeMenos = crearBoton("-Vol");
+        volumeMenos.addEventListener("click", function() {
+            console.log(audio.volume);
+            audio.volume = audio.volume - 0.2;
+        });
+
+        var volumeMas = crearBoton("+Vol");
+        volumeMas.addEventListener("click", function() {
+            console.log(audio.volume);
+            audio.volume = audio.volume + 0.2;
+        });
+
+
+    }
+
+    function crearBoton(nombre) {
+        var ele = document.createElement('button');
+        document.body.appendChild(ele);
+        ele.innerHTML = nombre;
+        return ele;
+    }
+
+    window.onload = inicio;
+</script>
+
+<body>
+
+    <audio id="audio" class="audio-fondo" controls loop autoplay>
+		<source src="../Ejercicio 2/cancion.mp3" type="audio/mp3">
+		<source src="../Ejercicio 2/cancion.ogg" type="audio/ogg">
+		Your browser does not support the audio element.
+	</audio>
+
+</body>
+
+</html>
