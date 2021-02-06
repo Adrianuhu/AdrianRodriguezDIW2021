@@ -16,6 +16,14 @@ function startJuego() {
     fallos = 0;
     fallosConsecutivos = 0;
 
+    //Borrar dianas del menu de inicio
+    var dianas = document.querySelectorAll("my-ball");
+    console.log(dianas);
+    for (let d of dianas) {
+        d.parentNode.removeChild(d);
+    }
+    //--------------------------------
+
     let instrucciones = document.getElementsByClassName("textoInstrucciones")[0];
     let display = document.getElementsByClassName("display")[0];
     let menu = document.getElementsByClassName("menu")[0];
