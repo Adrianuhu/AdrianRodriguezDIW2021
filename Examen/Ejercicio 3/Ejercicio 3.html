@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<style>
+    div {
+        width: 100px;
+        height: 100px;
+        margin-bottom: 3px;
+        border: 1px solid black;
+    }
+    
+    .rojo {
+        background-color: red;
+    }
+    
+    .grey {
+        background-color: grey;
+    }
+</style>
+
+<body>
+
+    <my-semaforo seconds="0.5"></my-semaforo>
+    <button id="button">Reiniciar</button>
+
+    <script>
+        document.getElementById('button').addEventListener("click", () => {
+            document.querySelector("my-semaforo").setAttribute("seconds", 2);
+        })
+    </script>
+
+    <script src="component.js"></script>
+
+</body>
+
+</html>
