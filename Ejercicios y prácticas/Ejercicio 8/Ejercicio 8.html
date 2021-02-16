@@ -3,12 +3,6 @@
 
 <head>
 
-    <!-- Esta animación simula una pelota rodando para mostrar que con pocas propiedades
-	 se pueden llevar a cabo efectos atractivos para el usuario.
-
-	 La imagen se desplaza y rota en los keyframes con la propiedad transform.
-	 
-	 Además, con animation-direction alternate se ejecuta cada vez en una dirección-->
 
     <style>
         body {
@@ -16,26 +10,37 @@
             background: #333;
         }
         
-        .ball {
-            animation-name: ballmove;
-            animation-duration: 2s;
+        .caja {
+            position: absolute;
+            width: 100px;
+            height: 100px;
+            background-color: darkred;
+            animation-name: DVDmove;
+            animation-duration: 6s;
             animation-iteration-count: infinite;
             animation-timing-function: ease-in-out;
-            animation-fill-mode: forwards;
-            animation-direction: alternate;
-            animation-play-state: paused;
         }
         
-        .ball:hover {
-            animation-play-state: running;
-        }
-        
-        @keyframes ballmove {
+        @keyframes DVDmove {
             0% {
-                transform: translateX(0) rotate(0);
+                top: 50%;
+                left: 10%;
+            }
+            25% {
+                top: 10%;
+                left: 10%;
+            }
+            50% {
+                top: 10%;
+                left: 10%;
+            }
+            75% {
+                top: 10%;
+                left: 10%;
             }
             100% {
-                transform: translateX(450px) rotate(2turn);
+                top: 90%;
+                left: 10%;
             }
         }
     </style>
@@ -44,7 +49,7 @@
 
 <body>
 
-    <img class="ball" src="../../Teoría/Ejemplos de _(1) Implantación de contenido multimedia_ y _(2) Animaciones y transiciones_/images/pelota.png" alt="ball" width="111" height="111" />
+    <div class="caja"></div>
 
 </body>
 
