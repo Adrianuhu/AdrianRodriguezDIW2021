@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Titillium+Web:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+
+<script>
+    function myFunction() {
+        var x = document.getElementById("Menu");
+        if (x.style.display === "flex") {
+            x.style.display = "none";
+        } else {
+            x.style.display = "flex";
+        }
+    }
+</script>
+
+<body>
+    <header>
+        <div class="banner">
+            <p>Break The Chain te da la bienvenida!!!</p>
+        </div>
+        <div class="logoMenu">
+            <div class="logo"></div>
+            <div class="iconMenu" onclick="myFunction()"></div>
+            <nav class="menu" id="Menu">
+                <a href="#">Introducción</a>
+                <a href="#">Recursos</a>
+                <a href="#">Innovación</a>
+                <a href="#">Participa</a>
+                <a href="#">FAQ</a>
+            </nav>
+            <div class="divBlanco"></div>
+        </div>
+
+
+    </header>
+
+    <section>
+        <div class="titulo">Break The Chain es una innovadora forma de llevar tu empresa al futuro</div>
+        <div class="botonesTitulo">
+            <a href="">Como comenzar</a>
+            <a href="">Escoja su plan</a>
+            <a href="">Ofertas</a>
+        </div>
+        <div class="video">
+            <a class="imagenPlay"></a>
+            <div class="videoTexto">
+                <p>¿Qué es Break The Chains?</p>
+            </div>
+        </div>
+    </section>
+    <section class="seccion1">
+        <div class="textoSecciones">Conózcanos!</div>
+        <div class="secciones">
+            <div class="seccionPersonas">
+                <div class="icoPersona1"></div>
+                <div class="tituloSeccion">Personas</div>
+                <div class="saberMas">Saber más</div>
+            </div>
+            <div class="seccionPersonas">
+                <div class="icoPersona2"></div>
+                <div class="tituloSeccion">Empresas</div>
+                <div class="saberMas">Saber más</div>
+            </div>
+            <div class="seccionPersonas">
+                <div class="icoPersona3"></div>
+                <div class="tituloSeccion">Desarrolladores</div>
+                <div class="saberMas">Saber más</div>
+            </div>
+        </div>
+    </section>
+    <section class="seccion2">
+        <p class="textoDescripción">Vamos implementar un sistema de block chain para crear una base de datos global en el que se recojan, datos de empresas que se quieran asociar con nosotros. De tal manera que estos datos, sobre cifras de contratación, porcentajes de cargos directivos
+            puedan ser visibles para cualquier entidad, y cualquier usuario. La tecnología de block chain implica un bajo coste, transparencia, seguimiento de los datos y una gran seguridad en estos.
+        </p>
+
+        <div class="logo2"></div>
+
+        <div class="botonComenzar">Como comenzar con nosotros</div>
+    </section>
+
+    <footer>
+
+        <div class="mapaNav">
+            <div class="botonFooter">Apóyanos</div>
+            <div class="enlaces">
+                <div class="columna">
+                    <p>Introducción</p>
+                    <a href="">Personas</a>
+                    <a href="">Empresas</a>
+                    <a href="">Desarrolladores</a>
+                </div>
+                <div class="columna">
+                    <p>Recursos</p>
+                    <a href="">Comunidad</a>
+                    <a href="">Vocabulario</a>
+                    <a href="">Recursos</a>
+                    <a href="">Eventos</a>
+                </div>
+                <div class="columna">
+                    <p>Participa</p>
+                    <a href="">Desarrollo</a>
+                    <a href="">Apoya</a>
+                </div>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>© Break The Chain 2020 - Copyright</p>
+        </div>
+    </footer>
+</body>
+
+</html>

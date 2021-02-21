@@ -1,0 +1,392 @@
+* {
+    font-family: 'Titillium Web', sans-serif;
+    padding: 0px;
+    margin: 0px;
+}
+
+A:link {
+    text-decoration: none
+}
+
+A:hover {
+    text-decoration: none
+}
+
+A:visited {
+    text-decoration: none
+}
+
+* {
+    outline: none;
+}
+
+*:focus {
+    outline: none;
+}
+
+textarea:focus,
+input:focus {
+    outline: none;
+}
+
+a {
+    text-decoration: none;
+    outline: none;
+}
+
+
+/*-----------------Formateo de estilo-----------------*/
+
+:root {
+    --Naranja: #ff7e00;
+    --AzulOscuro: #1c1f30;
+    --AzulClaro: #3490e6;
+    --NegroAzulado: #090c14;
+    --Gris: #9d9d9d;
+}
+
+.banner {
+    display: flex;
+    background-color: var(--Naranja);
+    height: 50px;
+    color: white;
+    align-items: center;
+    justify-content: center;
+}
+
+.logoMenu {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-content: stretch;
+    height: 100px;
+}
+
+.logo {
+    background-image: url(logo.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    flex-basis: 100px;
+}
+
+.menu {
+    display: flex;
+    align-items: center;
+}
+
+.menu a {
+    margin: 5px;
+    color: var(--NegroAzulado);
+}
+
+.divBlanco {
+    width: 100px;
+}
+
+
+/*----------------------------------*/
+
+.titulo {
+    text-align: center;
+    font-size: 3em;
+    padding: 5% 15%;
+}
+
+.botonesTitulo {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0% 5%;
+    justify-content: center;
+}
+
+.botonesTitulo a {
+    background-color: var(--Naranja);
+    padding: 1em 2em;
+    margin: 1em 1em;
+    width: 20%;
+    text-align: center;
+    color: white;
+}
+
+.video {
+    display: flex;
+    justify-content: center;
+    height: 50px;
+    align-content: center;
+    margin: 2em 0em;
+}
+
+.imagenPlay {
+    background-image: url(recursos/play-btn.svg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    flex-basis: 70px;
+    cursor: pointer;
+}
+
+.videoTexto {
+    display: flex;
+    align-items: center;
+}
+
+.seccion1 {
+    background-color: var(--AzulOscuro);
+    padding: 1em 10%;
+}
+
+.textoSecciones {
+    font-size: 2em;
+    text-align: center;
+    color: white;
+}
+
+.secciones {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.seccionPersonas {
+    margin: 1em 1em;
+    background-color: var(--NegroAzulado);
+    width: 20%;
+    padding: 1em;
+}
+
+.tituloSeccion {
+    color: white;
+    text-align: center;
+}
+
+.saberMas {
+    color: white;
+    text-align: center;
+    font-size: 0.8em;
+}
+
+.icoPersona1 {
+    background-image: url(recursos/ico_individuals.svg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 80px;
+    margin: 1em 0em;
+}
+
+.icoPersona2 {
+    background-image: url(recursos/ico_business.svg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 80px;
+    margin: 1em 0em;
+}
+
+.icoPersona3 {
+    background-image: url(recursos/ico_developers.svg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 80px;
+    margin: 1em 0em;
+}
+
+
+/*----------------------------------*/
+
+.seccion2 {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 5% 5%;
+    justify-content: space-evenly;
+}
+
+.textoDescripción {
+    flex-basis: 50%;
+    text-align: justify;
+}
+
+.logo2 {
+    flex-basis: 50%;
+    background-image: url(logo.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    margin: 1em 0em;
+}
+
+.botonComenzar {
+    text-align: center;
+    padding: 1em 2em;
+    margin: 1em;
+    background-color: var(--AzulOscuro);
+    color: white;
+}
+
+
+/*----------------------------------*/
+
+.mapaNav {
+    display: flex;
+    align-items: flex-start;
+    background-color: var(--AzulOscuro);
+    padding: 0em 5em;
+    padding-top: 10em;
+    padding-bottom: 2em;
+    justify-content: space-between;
+}
+
+.botonFooter {
+    background-color: var(--Naranja);
+    padding: 1em 2em;
+    width: 100px;
+    text-align: center;
+    color: white;
+}
+
+.enlaces {
+    display: flex;
+    justify-content: space-around;
+    flex-basis: 100%;
+    padding-left: 3em;
+}
+
+.columna {
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+}
+
+.columna p {
+    color: white;
+}
+
+.columna a {
+    color: var(--Gris);
+}
+
+.copyright {
+    display: flex;
+    background-color: var(--NegroAzulado);
+    color: var(--Gris);
+    height: 50px;
+    align-items: center;
+}
+
+.copyright p {
+    margin-left: 2em;
+    color: var(--Gris);
+    font-size: 0.8em;
+}
+
+
+/*----------------------------------*/
+
+@media (max-width: 768px) {
+    .logoMenu {
+        flex-direction: column;
+        flex-wrap: nowrap;
+        align-content: center;
+    }
+    .menu {
+        justify-content: center;
+    }
+    .seccionPersonas {
+        margin: 1em 1em;
+        width: 25%;
+        padding: 0.5em;
+    }
+    .secciones {
+        justify-content: center;
+    }
+    .mapaNav {
+        align-items: center;
+        flex-direction: column;
+        padding-top: 5em;
+    }
+    .botonFooter {
+        margin-bottom: 40px;
+    }
+    .enlaces {
+        padding-left: 0em;
+        justify-content: space-evenly;
+        flex-basis: 100%;
+        width: 80vh;
+    }
+}
+
+@media (max-width: 376px) {
+    .logoMenu {
+        flex-direction: row;
+        flex-wrap: wrap;
+        align-content: center;
+        height: auto;
+    }
+    .banner {
+        display: none;
+    }
+    .iconMenu {
+        background-image: url(recursos/menumobile.svg);
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center;
+        height: 80px;
+        margin: 1em 0em;
+        flex-basis: 10%;
+        cursor: pointer;
+    }
+    .menu {
+        flex-wrap: wrap;
+        background-color: var(--AzulOscuro);
+        width: 100%;
+        display: none;
+    }
+    .divBlanco {
+        display: none;
+    }
+    .menu a {
+        width: 100%;
+        text-align: center;
+        color: white;
+    }
+    .botonesTitulo {
+        flex-direction: column;
+        align-items: center;
+    }
+    .botonesTitulo a {
+        width: 60%;
+    }
+    .seccionPersonas {
+        width: 70%;
+    }
+    .logo2 {
+        order: -1;
+    }
+    .textoDescripción {
+        flex-basis: 100%;
+    }
+    .logo2 {
+        width: 100px;
+        height: 100px;
+        background-repeat: no-repeat;
+        background-position: center;
+        margin: 1em 0em;
+        background-size: contain;
+    }
+    .botonFooter {
+        display: none;
+    }
+    .mapaNav {
+        padding-top: 2em;
+    }
+    .enlaces {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+    }
+    .columna {
+        margin-bottom: 1em;
+    }
+}
