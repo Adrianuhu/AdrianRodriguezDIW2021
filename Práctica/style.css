@@ -45,6 +45,11 @@ a {
     --Gris: #9d9d9d;
 }
 
+header {
+    display: block;
+    margin-bottom: 20%;
+}
+
 .banner {
     display: flex;
     background-color: var(--Naranja);
@@ -55,7 +60,7 @@ a {
 }
 
 .logoMenu {
-    display: flex;
+    display: block;
     flex-wrap: wrap;
     justify-content: space-around;
     align-content: stretch;
@@ -63,11 +68,7 @@ a {
 }
 
 .logo {
-    background-image: url(logo.png);
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: center;
-    flex-basis: 100px;
+    width: 10px;
 }
 
 .menu {
@@ -210,7 +211,6 @@ a {
 
 .logo2 {
     flex-basis: 50%;
-    background-image: url(logo.png);
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
@@ -284,39 +284,6 @@ a {
 
 /*----------------------------------*/
 
-@media (max-width: 768px) {
-    .logoMenu {
-        flex-direction: column;
-        flex-wrap: nowrap;
-        align-content: center;
-    }
-    .menu {
-        justify-content: center;
-    }
-    .seccionPersonas {
-        margin: 1em 1em;
-        width: 25%;
-        padding: 0.5em;
-    }
-    .secciones {
-        justify-content: center;
-    }
-    .mapaNav {
-        align-items: center;
-        flex-direction: column;
-        padding-top: 5em;
-    }
-    .botonFooter {
-        margin-bottom: 40px;
-    }
-    .enlaces {
-        padding-left: 0em;
-        justify-content: space-evenly;
-        flex-basis: 100%;
-        width: 80vh;
-    }
-}
-
 @media (max-width: 376px) {
     .logoMenu {
         flex-direction: row;
@@ -326,16 +293,6 @@ a {
     }
     .banner {
         display: none;
-    }
-    .iconMenu {
-        background-image: url(recursos/menumobile.svg);
-        background-size: contain;
-        background-repeat: no-repeat;
-        background-position: center;
-        height: 80px;
-        margin: 1em 0em;
-        flex-basis: 10%;
-        cursor: pointer;
     }
     .menu {
         flex-wrap: wrap;
