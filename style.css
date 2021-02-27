@@ -39,6 +39,7 @@ a {
 
 :root {
     --Naranja: black;
+    /* Contrast Errors  Se cambia el contraste de naranja-blanco a negro-blanco*/
     --AzulOscuro: #1c1f30;
     --AzulClaro: #3490e6;
     --NegroAzulado: #090c14;
@@ -206,7 +207,7 @@ header {
 
 .textoDescripción {
     flex-basis: 50%;
-    text-align: justify;
+    /*  text-align: justify;  Se elimina el justificado */ 
 }
 
 .logo2 {
