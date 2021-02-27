@@ -38,7 +38,7 @@ a {
 /*-----------------Formateo de estilo-----------------*/
 
 :root {
-    --Naranja: #ff7e00;
+    --Naranja: black;
     --AzulOscuro: #1c1f30;
     --AzulClaro: #3490e6;
     --NegroAzulado: #090c14;
@@ -206,7 +206,6 @@ header {
 
 .textoDescripción {
     flex-basis: 50%;
-    text-align: justify;
 }
 
 .logo2 {
