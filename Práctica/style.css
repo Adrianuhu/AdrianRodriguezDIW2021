@@ -347,3 +347,28 @@ header {
         margin-bottom: 1em;
     }
 }
+
+.logo {
+    animation-name: move;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+    animation-direction: alternate;
+}
+
+@keyframes move {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(200px);
+    }
+}
+
+.logo {
+    transition: opacity 0.5s ease-out;
+}
+
+.logo:hover {
+    opacity: 0.3;
+}
