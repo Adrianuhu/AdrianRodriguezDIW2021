@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<style>
+    .caja {
+        width: 100px;
+        height: 100px;
+        background-color: yellow;
+        border: 1px solid black;
+        margin-bottom: 25px;
+        animation-duration: 4s;
+        animation-iteration-count: 5;
+        animation-delay: 1s;
+        animation-name: move;
+        animation-direction: alternate;
+        animation-fill-mode: forwards;
+    }
+    
+    #button {
+        transition: all 2s;
+        transition-delay: 0.5s;
+    }
+    
+    #button:active {
+        color: red;
+        box-shadow: 5px 5px grey;
+    }
+    /* transición que cambia el color de texto a rojo y añade una sombra gris con un ancho de 5px. La transición dura 2 segundos y tiene un retardo inicial de 0,5 segundos. */
+    
+    @keyframes move {
+        0% {
+            background-color: yellow;
+            transform: rotate(0deg);
+        }
+        50% {
+            background-color: red;
+        }
+        100% {
+            background-color: blue;
+            transform: rotate(360deg);
+        }
+    }
+</style>
+
+<script>
+    function parar() {
+        document.getElementById("caja").style.setProperty("animation-play-state", "paused");
+    }
+</script>
+
+<body>
+
+    <div id="caja" class="caja"></div>
+    <button id="button" onclick="parar()">Parar la animación</button>
+
+</body>
+
+</html>

@@ -1,0 +1,57 @@
+<!DOCTYPE HTML>
+<html lang="es-ES">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Examen parcial 2ª Evaluación</title>
+    <link rel="stylesheet" href="estilos1.css" />
+
+</head>
+
+<body>
+    <!-- Contenedor principal -->
+    <main id="wrapper">
+        <!-- Subcabecera para incluir la imagen -->
+        <nav id="cabecera">
+            <!-- Aquí va la etiqueta picture -->
+
+            <picture>
+                <source media="(min-width: 1200px)" sizes="70vw" srcset="img/img_1200.jpg 1200w, img/img_1600.jpg 1600w">
+
+                <source media="(min-width: 600px)" sizes="(min-width: 1000px)80vw,90vw" srcset="img/img_800.jpg 800w,
+				img/img_1200.jpg 1200w">
+
+                <source srcset="img/img_400.jpg">
+
+                <img src="img/img_800.png" alt="Para navegadores antiguos" />
+            </picture>
+        </nav>
+
+        <!-- Sección para contenidos audiovisuales -->
+        <section id="multimedia">
+            <!-- Elemento donde se incluyen el audio -->
+
+            <article id="audio" class="caja">
+                <!-- Aquí va la etiqueta audio -->
+                <audio preload controls loop autoplay muted>
+					<source src="audio/fondo.ogg" type="audio/ogg"/>
+					<source src="audio/fondo.mp3" type="audio/mpeg"/>
+					El navegador no soporta el audio
+				</audio>
+            </article>
+
+            <!-- Elemento donde se incluye el vídeo de YouTube -->
+            <article id="video1" class="caja">
+                <iframe width="420" height="300" src="https://www.youtube.com/embed?listType=playlist&playlist=zu9W8AtZy7U&loop=1&controls=2&muted=1&autoplay=1"></iframe>
+                <!-- SE AÑADE EL MUTED PARA QUE SE PUEDA REPRODUCIR SIN SONIDO EN ALGUNOS NAVEGADORES -->
+                <!-- SE USA UNA PLAYLIST PARA PODER REPRODUCIRLO EN BUCLE -->
+
+            </article>
+        </section>
+
+    </main>
+
+</body>
+
+</html
